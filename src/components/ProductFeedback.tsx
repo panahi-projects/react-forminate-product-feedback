@@ -48,7 +48,7 @@ const feedbackForm: FormDataCollectionType = {
       label: "Can we contact you about this feedback?",
       visibility: {
         dependsOn: "rating",
-        condition: "equals", //"greater_than",
+        condition: "greater_than",
         value: "3", // Only show if rating > 3
       },
       options: [
@@ -74,7 +74,7 @@ const feedbackForm: FormDataCollectionType = {
       ],
       visibility: {
         dependsOn: ["contactMe"],
-        condition: "equals", //contains
+        condition: "contains",
         value: "yes",
       },
       className: "border border-gray-400 rounded p-2 w-full", //TailwindCSS classes
